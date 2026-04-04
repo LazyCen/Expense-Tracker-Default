@@ -27,4 +27,7 @@ export const router = createBrowserRouter([
       },
     ],
   },
-]);
+], {
+  // This is the CRITICAL part for GitHub Pages
+  basename: "/Smart-Expense-Tracker" 
+});
