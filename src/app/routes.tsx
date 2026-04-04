@@ -1,4 +1,5 @@
-import { createBrowserRouter } from "react-router";
+// Change the import to include createHashRouter
+import { createHashRouter } from "react-router"; 
 import { RequireAuth } from "./components/auth/RequireAuth";
 import { DashboardLayout } from "./components/layout/DashboardLayout";
 import { Login } from "./pages/Login";
@@ -7,7 +8,8 @@ import { AddExpense } from "./pages/AddExpense";
 import { Budget } from "./pages/Budget";
 import { History } from "./pages/History";
 
-export const router = createBrowserRouter([
+// Change createBrowserRouter to createHashRouter
+export const router = createHashRouter([
   {
     path: "/login",
     Component: Login,
@@ -27,7 +29,4 @@ export const router = createBrowserRouter([
       },
     ],
   },
-], {
-  // This is the CRITICAL part for GitHub Pages
-  basename: "/Smart-Expense-Tracker" 
-});
+]);
